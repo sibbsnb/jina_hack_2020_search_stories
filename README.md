@@ -1,7 +1,7 @@
 # jina_hack_2020_search_stories
 
 ## Screenshots
-![Logo](/images/logo_hack.png)
+![Logo](/images/logo_hack.png| width=100)
 
 ## How to run the projects
 
