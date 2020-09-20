@@ -3,30 +3,42 @@
 ## How to run the projects
 
 ### Jina
+```bash
 cd search_stories
 python app.py search
+```
 
 ### Rasa
+```bash
 cd rasa
+```
 
 Action Server
+```bash
 python -m rasa run action 
+```
 
 Rasa Core Server
+```bash
 rasa run -p 5007 --cors "*" --debug
+```
 
 ### Flask Test Webpage
+```bash
 cd rasa
 python app.py
+```
 
 ## More details on Jina and Rasa
 
 ### Jina
 
+```bash
 python3 -m venv env/search_story_env
 source env/search_story_env/bin/activate
 
 pip install -U cookiecutter && cookiecutter gh:jina-ai/cookiecutter-jina
+```
 
 For the hack Search Stories, how the project was created:
 
@@ -42,7 +54,9 @@ After running cookiecutter, run:
 cd search_stories
 ls
 
+```bash
 pip install -r requirements.txt
+```
 
 kaggle datasets download -d shubchat/1002-short-stories-from-project-guttenberg
 
