@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Jina Hack - Search Stories</title>
+        <style>
+            * {
+              box-sizing: border-box;
+            }
+            
+            .column {
+              float: left;
+              width: 33.33%;
+              padding: 5px;
+            }
+            
+            /* Clearfix (clear floats) */
+            .row::after {
+              content: "";
+              clear: both;
+              display: table;
+            }
+            </style>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+              <img src="/static/jina.png" width="30" height="30" class="d-inline-block align-top" alt="">
+              Search Stories Chatbot
+            </a>
+          </nav>
+        <br>
+
+        <div class="container">
+            <div class="column">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="/static/jina.png" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Jina Search used to power the search to stories using Kaggle dataset from  http://gutenberg.org</p>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="/static/rasa.png" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Jina search API integrated with Rasa conversational AI for a complete experience</p>
+                </div>
+              </div>
+            </div>
+
+
+       
+
+        <div id="webchat"></div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"></script>
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    initPayload: "/get_started",
+    customData: {"language": "en"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+    socketUrl: "http://localhost:5007",
+    socketPath: "/socket.io/",
+    title: "Search Stories Chatbot",
+    subtitle: "powered by Jina.ai search",
+    showFullScreenButton: "true",
+    params: {
+        "storage": "session"
+        } // can be set to "local"  or "session". details in storage section.
+    
+  })
+</script>
+
+
+    </body>
+</html>
