@@ -3,6 +3,15 @@
 ## Screenshots
 <img src="/images/logo_hack.png" alt="alt text" width="50" >
 
+<img src="/images/Search_Stories_Chatbot_1.png" alt="alt text" width="100" >
+<img src="/images/Search_Stories_Chatbot_2.png" alt="alt text" width="100" >
+
+<img src="/images/jina_ai_code.png" alt="alt text" width="100" >
+
+<img src="/images/jina_box.png" alt="alt text" width="100" >
+
+<img src="/images/search_console.png" alt="alt text" width="100" >
+
 
 ## How to run the projects
 
