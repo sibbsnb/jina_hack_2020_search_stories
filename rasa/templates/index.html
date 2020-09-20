@@ -33,6 +33,23 @@
         <br>
 
         <div class="container">
+          <div class="column">
+
+            <jina-searchbar
+            acceptAudio="false"
+            acceptVideo="false" >
+            </jina-searchbar>
+            
+            
+            <jina-floater
+            acceptAudio="false"
+            acceptVideo="false" >
+            </jina-floater>
+            <script src="https://unpkg.com/jinabox"></script>
+            <script>
+            JinaBox.init('http://localhost:65482/api/search',{ timeout:25000, top_k:5});
+            </script>  
+            </div>
             <div class="column">
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="/static/jina.png" alt="Card image cap">
@@ -49,6 +66,8 @@
                 </div>
               </div>
             </div>
+
+         
 
 
        

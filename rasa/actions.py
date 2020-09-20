@@ -110,10 +110,14 @@ class SearchStoriesForm(FormAction):
                     #text = result["text"]
 
                     #text = SearchStoriesForm.remove_prefix(result["text"], "txt,")
-                    text = csv_data[result["parentId"]][1]
-                    story_id = csv_data[result["parentId"]][0].replace(".txt", "")
-                    author = csv_data[result["parentId"]][2]
-                    language = csv_data[result["parentId"]][3]
+                    text = csv_data[result["parentId"]-1][1]
+                    story_id = csv_data[result["parentId"]-1][0].replace(".txt", "")
+                    if "-" in story_id:
+                        split_string = story_id.split("-", 1)
+                        story_id = split_string[0]
+                        
+                    author = csv_data[result["parentId"]-1][2]
+                    language = csv_data[result["parentId"]-1][3]
                     link = "https://www.gutenberg.org/ebooks/" + story_id
 
                     button = { 
