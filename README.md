@@ -26,7 +26,7 @@ cd rasa
 
 Action Server
 ```bash
-python -m rasa run action 
+python -m rasa run actions 
 ```
 
 Rasa Core Server
