@@ -75,18 +75,18 @@ General Kaggle Info
 To use the Kaggle API, sign up for a Kaggle account at https://www.kaggle.com. Then go to the 'Account' tab of your user profile (https://www.kaggle.com/<username>/account) and select 'Create API Token'. This will trigger the download of kaggle.json, a file containing your API credentials. Place this file in the location ~/.kaggle/kaggle.json (on Windows in the location C:\Users\<Windows-username>\.kaggle\kaggle.json - you can check the exact location, sans drive, with echo %HOMEPATH%). You can define a shell environment variable KAGGLE_CONFIG_DIR to change this location to $KAGGLE_CONFIG_DIR/kaggle.json (on Windows it will be %KAGGLE_CONFIG_DIR%\kaggle.json).
 
 
-source ../get_data.sh
+```source ../get_data.sh```
 
 ****************
 
 Index and run the App
 
-python app.py index
+```python app.py index
 
 Optional:
 export $MAX_DOCS=50000
 
-python app.py search
+python app.py search```
 
 ****************
 
@@ -94,7 +94,7 @@ python app.py search
 
 Creating Rasa project 
 
-python3 -m venv env/rasa_env
+```python3 -m venv env/rasa_env
 source env/rasa_env/bin/activate
 mkdir rasa
 cd rasa 
@@ -104,7 +104,7 @@ pip install -r requirements.txt
 rasa init --no-prompt
 rasa train
 rasa run -p 5007 --cors "*" --debug
-python -m rasa run actions
+python -m rasa run actions```
 
 Modify the rasa data and action server for integrating with Jina apis
 
